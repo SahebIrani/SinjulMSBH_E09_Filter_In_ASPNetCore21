@@ -1,0 +1,25 @@
+﻿@{
+      SinjulMSBH_E09.Controllers.SinjulMSBHViewModels vm = ViewData["HandleException"] as SinjulMSBH_E09.Controllers.SinjulMSBHViewModels;
+}
+
+@if ( vm != null )
+{
+      <section class="container bg-warning text-center">
+            <h3 class="text-primary"><strong>Message: </strong>@vm.Message</h3>
+            <p style="color:red;"><strong class="lead">StackTrace</strong>:@vm.StackTrace</p>
+            <ul class="list-group">
+                  <li class="list-group-item list-group-item-text"><strong>Controller: </strong>@vm.Controller</li>
+                  <li class="list-group-item list-group-item-text"><strong>Action: </strong>@vm.Action</li>
+                  <li class="list-group-item list-group-item-text"><strong>Page: </strong>@vm.Page</li>
+                  <li class="list-group-item list-group-item-text"><strong>Area: </strong>@vm.Area</li>
+                  <li class="list-group-item list-group-item-text"><strong>Host: </strong>@vm.Host</li>
+                  <li class="list-group-item list-group-item-text"><strong>IsHttps : </strong>@vm.IsHTTPS</li>
+                  <li class="list-group-item list-group-item-text"><strong>Method:</strong>@vm.Method</li>
+                  <li class="list-group-item list-group-item-text"><strong>Path: </strong>@vm.Path</li>
+                  <li class="list-group-item list-group-item-text"><strong>Scheme:  </strong>@vm.Scheme</li>
+                  <li class="list-group-item list-group-item-text"><strong>Protocol: </strong>@vm.Protocol</li>
+                  <li class="list-group-item list-group-item-text"><strong>UserAgent: </strong> @vm.UserAgent</li>
+                  <li class="list-group-item list-group-item-text"><strong>AcceptLanguage: </strong> @vm.AcceptLanguage</li>
+            </ul>
+      </section>
+}

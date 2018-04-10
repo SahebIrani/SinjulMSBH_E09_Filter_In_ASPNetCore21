@@ -1,0 +1,14 @@
+﻿@{
+      Exception ex = ViewData["HandleException"] as Exception;
+}
+
+@if(ex != null)
+{
+      <h1>@ex.Message</h1>
+
+      <div>@ex.StackTrace</div>
+}
+
+<h1 class="text-danger">Error ..</h1>
+<h2>Error Description ..</h2>
+<h3>@ViewData[ "Exception" ]</h3>  
